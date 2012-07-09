@@ -1,12 +1,19 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 
 import urllib
 import cgi
 import os
 import re
+import sys
 from HTMLParser import HTMLParser
-#sys.argv[1]
-f = urllib.urlopen("http://www.jsoftware.com/docs/help701/learning/06.htm")
+print(sys.argv[1])
+if len(sys.argv) != 2:
+	print("첫 번째 인자로 변환할 url이 필요합니다.")
+	sys.exit()
+
+f = urllib.urlopen(sys.argv[1])
 s = f.read()
 s_line = s.split('\r\n')
 #s = '<?xml version="1.0" encoding="UTF-8" ?>' + f.read()[63:]
@@ -135,9 +142,8 @@ class MyHTMLParser(HTMLParser):
 			return '\r\n\t' + ('\r\n\t'.join(data.split('\r\n'))) + '\r\n'
 	
 	def getP(self, data, mode):
-		return data.replace('\r\n', '')
+		return data.replace('\r\n', '') + ' '
 
 # instantiate the parser and fed it some HTML
 parser = MyHTMLParser()
 parser.feed(s)
-
