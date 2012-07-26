@@ -423,8 +423,7 @@ def</TT></TD>
 <TD><TT>2 2 2</TT></TD>
 </TABLE>
 
-`B` is 3-dimensional, and so is `R`. As we would expect, this concatenation-of-shapes holds when a selector (`r`, say) is a list of length one:
-`B`는 3차원이고 `R`도 3차원이다. 예상대로 모양의 연결은 셀렉터가 길이가 1인 리스트일때 가능하다.------------------
+`B`는 3차원이고 `R`도 3차원이다. 셀렉터(위에서의 r)가 길이가 1인 리스트일 때 연결 모양이 아래에 있다.
 
  <TABLE CELLPADDING=10 BORDER=1>
 <TR  VALIGN=TOP>
@@ -441,8 +440,7 @@ def</TT></TD>
 <TD><TT>2 1 2</TT></TD>
 </TABLE>
 
-and the concatenation-of-shapes holds when selector `r` is a scalar:
-그리고 모양의 연결은 셀렉터 `r`이 스칼라인것을 잡는다.-------------
+그리고 셀렉터 `r`이 스칼라일 때의 연결 모양이다.
 
  <TABLE CELLPADDING=10 BORDER=1>
 <TR  VALIGN=TOP>
@@ -573,7 +571,6 @@ de*</TT></TD>
 <TD><TT>98 100 100 99</TT></TD>
 </TABLE>
 
-Since `}` is an adverb, it can acceptas argument either the indices `(X f Y)` or the verb `f`.
 `}`가 부사이기 때문에, 인자로 인덱스인 `X f Y`나 함수 `f`를 다 취할 수 있다.
 
 	   cap =: f }
